@@ -1,0 +1,42 @@
+// define a class and add prperties and getter method and retrieve the output
+
+// This is also a way to add and declare properties via constructor.
+
+class Computer {
+
+  // Add the properties to class
+
+ //ram : string;
+  //cpu : string;
+  //harddisk : string;
+  //gpu : string;
+  //battery : string;
+
+  // now define a constructor
+// now lets make any property opetional
+  constructor(public ram : string,public cpu ?: string,public harddisk ?: string,public gpu ?: string,public battery ?: string)
+  {
+      this.ram = ram;
+      this.cpu = cpu;
+      this.harddisk = harddisk;
+      this.gpu = gpu;
+      this.battery=battery;
+  };
+
+// declare a get method for cpu property
+
+  getCPU = () => {
+    return this.cpu;
+  };
+  
+
+
+};
+
+// now create an object to fetch cpu data
+
+let intelCore = new Computer("8GB");
+
+let cpuData = intelCore.getCPU();
+
+console.log(cpuData);

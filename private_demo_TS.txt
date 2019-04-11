@@ -1,0 +1,51 @@
+// define a class and add properties and getter method and retrieve the output
+class Computer {
+
+  // Add the properties to class
+
+ private ram : string;
+ private cpu : string;
+ private harddisk : string;
+ private gpu : string;
+ private battery : string;
+
+  // now define a constructor
+
+  constructor(ram : string,cpu : string,harddisk : string,gpu : string,battery : string)
+  {
+      this.ram = ram;
+      this.cpu = cpu;
+      this.harddisk = harddisk;
+      this.gpu = gpu;
+      this.battery=battery;
+  };
+
+// declare a get method for cpu property
+
+getCpu = () => {
+return this.cpu;
+};
+
+setCpu = (value:string) => {
+this.cpu = value;
+};
+
+};
+
+// now create an object to fetch cpu data
+
+let intelCore = new Computer("12GB","4GHZ","2TB","8GB","9000MAH");
+
+let cpuData = intelCore.getCpu();
+
+console.log("The old cpu info: " + cpuData);
+
+// now set the value of  cpu to 20GHZ
+
+intelCore.setCpu("20GHZ");
+
+// now use getter method to get the new value
+
+let newCpuData = intelCore.getCpu();
+
+console.log("The new cpu info: " + newCpuData);

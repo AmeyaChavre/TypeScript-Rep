@@ -1,0 +1,45 @@
+class Mammal
+{
+constructor(public limbs : number, public dietType : string, public animalType : string)
+{
+this.limbs = limbs;
+this.dietType = dietType;
+this.animalType = animalType;
+};
+
+getDietType = () =>
+{
+  return this.dietType;
+}
+
+setDietType = (value:string) =>
+{
+  this.dietType=value;
+}
+
+};
+
+class Dog extends Mammal
+{
+constructor(public limbs : number, public dietType : string, public animalType : string)
+  {
+    super(4,"Omnivore","Terestrial");
+  }
+
+canBark = () =>
+{
+  return true;
+}
+}
+
+// instantiate dog class 
+
+let dogMania = new Dog(4,"Herbivore","Terestrial");
+
+let canDogBark = dogMania.canBark();
+
+console.log("Can the dog bark: " + canDogBark);
+
+let doggyDiet = dogMania.dietType;
+
+console.log("The dog is a : " + doggyDiet);
